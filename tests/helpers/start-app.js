@@ -1,7 +1,7 @@
-import Application from 'sandbox/app';
-import Router from 'sandbox/router';
+var Application = require('sandbox/app')['default'];
+var Router = require('sandbox/router')['default'];
 
-function startApp(attrs) {
+export default function startApp(attrs) {
   var App;
 
   var attributes = Ember.merge({
@@ -25,5 +25,3 @@ function startApp(attrs) {
 
   return App;
 }
-
-export default startApp;
