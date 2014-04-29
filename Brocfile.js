@@ -1,7 +1,6 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var push = Array.prototype.push;
 
 var app = new EmberApp({
   name: require('./package.json').name,
@@ -29,15 +28,7 @@ var app = new EmberApp({
   importWhitelist: {
     'ember': ['default'],
     'ember/resolver': ['default'],
-    'ember/load-initializers': ['default'],
-    'ember-qunit': [
-      'globalize',
-      'moduleFor',
-      'moduleForComponent',
-      'moduleForModel',
-      'test',
-      'setResolver'
-    ]
+    'ember/load-initializers': ['default']
   },
 
   // hack
