@@ -37,24 +37,11 @@ var app = new EmberApp({
       'moduleForModel',
       'test',
       'setResolver'
-    ],
-    'qunit': ['default']
+    ]
   },
 
   // hack
   getEnvJSON: require('./config/environment')
 });
-
-if (app.env !== 'production') {
-  push.apply(app.ignoredModules, [
-    'qunit',
-    'ember-qunit'
-  ]);
-
-  push.apply(app.legacyFilesToAppend, [
-    'test-shims.js',
-    'ember-qunit/dist/named-amd/main.js'
-  ]);
-}
 
 module.exports = app.toTree();
